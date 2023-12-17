@@ -1,7 +1,7 @@
 ﻿
 namespace Tyuiu.SolievAH.Sprint7.V10
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.

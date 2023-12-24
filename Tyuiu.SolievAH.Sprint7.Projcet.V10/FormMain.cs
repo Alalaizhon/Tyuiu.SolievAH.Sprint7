@@ -87,14 +87,14 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10
             OpenChildForm(new Forms.FormOrder(),sender);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonHelp_SAH_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.FormHelp(), sender);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonAbout_SAH_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new Forms.FormAbout(), sender);
         }
     }
 }

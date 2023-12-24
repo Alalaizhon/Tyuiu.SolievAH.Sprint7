@@ -65,7 +65,7 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             this.labelName_SAH = new System.Windows.Forms.Label();
             this.textBoxProduct_SAH = new System.Windows.Forms.TextBox();
             this.textBoxAdress_SAH = new System.Windows.Forms.TextBox();
-            this.textBoxSecondName_SAH = new System.Windows.Forms.TextBox();
+            this.textBoxFullName_SAH = new System.Windows.Forms.TextBox();
             this.labelInfo_SAH = new System.Windows.Forms.Label();
             this.openFileDialog_SAH = new System.Windows.Forms.OpenFileDialog();
             this.panelDesktopData_SAH.SuspendLayout();
@@ -79,14 +79,23 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             this.panelDesktopData_SAH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(59)))));
             this.panelDesktopData_SAH.Controls.Add(this.buttonRemoveOrdr_SAH);
             this.panelDesktopData_SAH.Controls.Add(this.panelDataGridView_SAH);
+            this.panelDesktopData_SAH.Controls.Add(this.labelCount2_SAH);
             this.panelDesktopData_SAH.Controls.Add(this.labelDateComp_SAH);
+            this.panelDesktopData_SAH.Controls.Add(this.textBoxCount2_SAH);
             this.panelDesktopData_SAH.Controls.Add(this.labelPrice_SAH);
+            this.panelDesktopData_SAH.Controls.Add(this.labelProduct1_SAH);
             this.panelDesktopData_SAH.Controls.Add(this.labelNumOrder_SAH);
+            this.panelDesktopData_SAH.Controls.Add(this.textBoxProduct1_SAH);
             this.panelDesktopData_SAH.Controls.Add(this.textBoxDayOfExecution_SAH);
+            this.panelDesktopData_SAH.Controls.Add(this.checkBoxADD_SAH);
             this.panelDesktopData_SAH.Controls.Add(this.textBoxPrice_SAH);
+            this.panelDesktopData_SAH.Controls.Add(this.labelCount_SAH);
             this.panelDesktopData_SAH.Controls.Add(this.textBoxNumOrder_SAH);
+            this.panelDesktopData_SAH.Controls.Add(this.textBoxCount_SAH);
             this.panelDesktopData_SAH.Controls.Add(this.panelInfo_SAH);
             this.panelDesktopData_SAH.Controls.Add(this.labelInfo_SAH);
+            this.panelDesktopData_SAH.Controls.Add(this.textBoxProduct_SAH);
+            this.panelDesktopData_SAH.Controls.Add(this.labelProduct_SAH);
             this.panelDesktopData_SAH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktopData_SAH.Location = new System.Drawing.Point(0, 0);
             this.panelDesktopData_SAH.Name = "panelDesktopData_SAH";
@@ -99,9 +108,9 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             this.buttonRemoveOrdr_SAH.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.buttonRemoveOrdr_SAH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRemoveOrdr_SAH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonRemoveOrdr_SAH.Location = new System.Drawing.Point(225, 481);
+            this.buttonRemoveOrdr_SAH.Location = new System.Drawing.Point(204, 481);
             this.buttonRemoveOrdr_SAH.Name = "buttonRemoveOrdr_SAH";
-            this.buttonRemoveOrdr_SAH.Size = new System.Drawing.Size(170, 50);
+            this.buttonRemoveOrdr_SAH.Size = new System.Drawing.Size(191, 50);
             this.buttonRemoveOrdr_SAH.TabIndex = 30;
             this.buttonRemoveOrdr_SAH.Text = "Удалить Заказ";
             this.buttonRemoveOrdr_SAH.UseVisualStyleBackColor = true;
@@ -182,6 +191,7 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             this.textBoxSearch_SAH.Name = "textBoxSearch_SAH";
             this.textBoxSearch_SAH.Size = new System.Drawing.Size(100, 20);
             this.textBoxSearch_SAH.TabIndex = 32;
+            this.textBoxSearch_SAH.TextChanged += new System.EventHandler(this.textBoxSearch_SAH_TextChanged);
             // 
             // buttonSort_SAH
             // 
@@ -201,7 +211,7 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             this.dataGridViewTable_SAH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTable_SAH.Location = new System.Drawing.Point(3, 128);
             this.dataGridViewTable_SAH.Name = "dataGridViewTable_SAH";
-            this.dataGridViewTable_SAH.RowHeadersVisible = false;
+            this.dataGridViewTable_SAH.RowHeadersWidth = 10;
             this.dataGridViewTable_SAH.Size = new System.Drawing.Size(513, 406);
             this.dataGridViewTable_SAH.TabIndex = 0;
             // 
@@ -209,7 +219,7 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             // 
             this.labelDateComp_SAH.AutoSize = true;
             this.labelDateComp_SAH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelDateComp_SAH.Location = new System.Drawing.Point(239, 195);
+            this.labelDateComp_SAH.Location = new System.Drawing.Point(210, 316);
             this.labelDateComp_SAH.Name = "labelDateComp_SAH";
             this.labelDateComp_SAH.Size = new System.Drawing.Size(98, 13);
             this.labelDateComp_SAH.TabIndex = 3;
@@ -219,7 +229,7 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             // 
             this.labelPrice_SAH.AutoSize = true;
             this.labelPrice_SAH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelPrice_SAH.Location = new System.Drawing.Point(236, 151);
+            this.labelPrice_SAH.Location = new System.Drawing.Point(207, 117);
             this.labelPrice_SAH.Name = "labelPrice_SAH";
             this.labelPrice_SAH.Size = new System.Drawing.Size(33, 13);
             this.labelPrice_SAH.TabIndex = 3;
@@ -229,7 +239,7 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             // 
             this.labelNumOrder_SAH.AutoSize = true;
             this.labelNumOrder_SAH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelNumOrder_SAH.Location = new System.Drawing.Point(239, 112);
+            this.labelNumOrder_SAH.Location = new System.Drawing.Point(210, 78);
             this.labelNumOrder_SAH.Name = "labelNumOrder_SAH";
             this.labelNumOrder_SAH.Size = new System.Drawing.Size(58, 13);
             this.labelNumOrder_SAH.TabIndex = 3;
@@ -237,21 +247,21 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             // 
             // textBoxDayOfExecution_SAH
             // 
-            this.textBoxDayOfExecution_SAH.Location = new System.Drawing.Point(239, 211);
+            this.textBoxDayOfExecution_SAH.Location = new System.Drawing.Point(210, 332);
             this.textBoxDayOfExecution_SAH.Name = "textBoxDayOfExecution_SAH";
             this.textBoxDayOfExecution_SAH.Size = new System.Drawing.Size(100, 20);
             this.textBoxDayOfExecution_SAH.TabIndex = 2;
             // 
             // textBoxPrice_SAH
             // 
-            this.textBoxPrice_SAH.Location = new System.Drawing.Point(239, 167);
+            this.textBoxPrice_SAH.Location = new System.Drawing.Point(210, 133);
             this.textBoxPrice_SAH.Name = "textBoxPrice_SAH";
             this.textBoxPrice_SAH.Size = new System.Drawing.Size(100, 20);
             this.textBoxPrice_SAH.TabIndex = 2;
             // 
             // textBoxNumOrder_SAH
             // 
-            this.textBoxNumOrder_SAH.Location = new System.Drawing.Point(239, 128);
+            this.textBoxNumOrder_SAH.Location = new System.Drawing.Point(210, 94);
             this.textBoxNumOrder_SAH.Name = "textBoxNumOrder_SAH";
             this.textBoxNumOrder_SAH.Size = new System.Drawing.Size(100, 20);
             this.textBoxNumOrder_SAH.TabIndex = 2;
@@ -261,27 +271,18 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             this.panelInfo_SAH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(59)))));
             this.panelInfo_SAH.Controls.Add(this.textBoxAccountNumb_SAH);
             this.panelInfo_SAH.Controls.Add(this.textBoxPhoneNum_SAH);
-            this.panelInfo_SAH.Controls.Add(this.labelCount2_SAH);
-            this.panelInfo_SAH.Controls.Add(this.textBoxCount2_SAH);
-            this.panelInfo_SAH.Controls.Add(this.labelProduct1_SAH);
-            this.panelInfo_SAH.Controls.Add(this.textBoxProduct1_SAH);
-            this.panelInfo_SAH.Controls.Add(this.checkBoxADD_SAH);
-            this.panelInfo_SAH.Controls.Add(this.labelCount_SAH);
-            this.panelInfo_SAH.Controls.Add(this.textBoxCount_SAH);
             this.panelInfo_SAH.Controls.Add(this.buttonAddOrder_SAH);
             this.panelInfo_SAH.Controls.Add(this.labelInfo);
-            this.panelInfo_SAH.Controls.Add(this.labelProduct_SAH);
             this.panelInfo_SAH.Controls.Add(this.labelPhoneNum_SAH);
             this.panelInfo_SAH.Controls.Add(this.labelAdress_SAH);
             this.panelInfo_SAH.Controls.Add(this.labelNumber_SAH);
             this.panelInfo_SAH.Controls.Add(this.labelName_SAH);
-            this.panelInfo_SAH.Controls.Add(this.textBoxProduct_SAH);
             this.panelInfo_SAH.Controls.Add(this.textBoxAdress_SAH);
-            this.panelInfo_SAH.Controls.Add(this.textBoxSecondName_SAH);
+            this.panelInfo_SAH.Controls.Add(this.textBoxFullName_SAH);
             this.panelInfo_SAH.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelInfo_SAH.Location = new System.Drawing.Point(0, 0);
             this.panelInfo_SAH.Name = "panelInfo_SAH";
-            this.panelInfo_SAH.Size = new System.Drawing.Size(225, 531);
+            this.panelInfo_SAH.Size = new System.Drawing.Size(204, 531);
             this.panelInfo_SAH.TabIndex = 0;
             // 
             // textBoxAccountNumb_SAH
@@ -304,7 +305,7 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             // 
             this.labelCount2_SAH.AutoSize = true;
             this.labelCount2_SAH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelCount2_SAH.Location = new System.Drawing.Point(142, 323);
+            this.labelCount2_SAH.Location = new System.Drawing.Point(330, 263);
             this.labelCount2_SAH.Name = "labelCount2_SAH";
             this.labelCount2_SAH.Size = new System.Drawing.Size(41, 13);
             this.labelCount2_SAH.TabIndex = 34;
@@ -313,7 +314,7 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             // 
             // textBoxCount2_SAH
             // 
-            this.textBoxCount2_SAH.Location = new System.Drawing.Point(142, 342);
+            this.textBoxCount2_SAH.Location = new System.Drawing.Point(330, 282);
             this.textBoxCount2_SAH.Name = "textBoxCount2_SAH";
             this.textBoxCount2_SAH.Size = new System.Drawing.Size(38, 20);
             this.textBoxCount2_SAH.TabIndex = 33;
@@ -324,16 +325,16 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             // 
             this.labelProduct1_SAH.AutoSize = true;
             this.labelProduct1_SAH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelProduct1_SAH.Location = new System.Drawing.Point(22, 326);
+            this.labelProduct1_SAH.Location = new System.Drawing.Point(210, 266);
             this.labelProduct1_SAH.Name = "labelProduct1_SAH";
-            this.labelProduct1_SAH.Size = new System.Drawing.Size(58, 13);
+            this.labelProduct1_SAH.Size = new System.Drawing.Size(38, 13);
             this.labelProduct1_SAH.TabIndex = 32;
-            this.labelProduct1_SAH.Text = "Продукт 2";
+            this.labelProduct1_SAH.Text = "Товар";
             this.labelProduct1_SAH.Visible = false;
             // 
             // textBoxProduct1_SAH
             // 
-            this.textBoxProduct1_SAH.Location = new System.Drawing.Point(22, 342);
+            this.textBoxProduct1_SAH.Location = new System.Drawing.Point(210, 282);
             this.textBoxProduct1_SAH.Name = "textBoxProduct1_SAH";
             this.textBoxProduct1_SAH.Size = new System.Drawing.Size(111, 20);
             this.textBoxProduct1_SAH.TabIndex = 31;
@@ -343,11 +344,11 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             // 
             this.checkBoxADD_SAH.AutoSize = true;
             this.checkBoxADD_SAH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.checkBoxADD_SAH.Location = new System.Drawing.Point(22, 289);
+            this.checkBoxADD_SAH.Location = new System.Drawing.Point(210, 229);
             this.checkBoxADD_SAH.Name = "checkBoxADD_SAH";
-            this.checkBoxADD_SAH.Size = new System.Drawing.Size(144, 17);
+            this.checkBoxADD_SAH.Size = new System.Drawing.Size(110, 17);
             this.checkBoxADD_SAH.TabIndex = 30;
-            this.checkBoxADD_SAH.Text = "А можно еще мне ээээ";
+            this.checkBoxADD_SAH.Text = "Добавить Товар";
             this.checkBoxADD_SAH.UseVisualStyleBackColor = true;
             this.checkBoxADD_SAH.CheckedChanged += new System.EventHandler(this.checkBoxADD_SAH_CheckedChanged);
             // 
@@ -355,7 +356,7 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             // 
             this.labelCount_SAH.AutoSize = true;
             this.labelCount_SAH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelCount_SAH.Location = new System.Drawing.Point(139, 234);
+            this.labelCount_SAH.Location = new System.Drawing.Point(327, 174);
             this.labelCount_SAH.Name = "labelCount_SAH";
             this.labelCount_SAH.Size = new System.Drawing.Size(41, 13);
             this.labelCount_SAH.TabIndex = 29;
@@ -363,7 +364,7 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             // 
             // textBoxCount_SAH
             // 
-            this.textBoxCount_SAH.Location = new System.Drawing.Point(139, 250);
+            this.textBoxCount_SAH.Location = new System.Drawing.Point(327, 190);
             this.textBoxCount_SAH.Name = "textBoxCount_SAH";
             this.textBoxCount_SAH.Size = new System.Drawing.Size(38, 20);
             this.textBoxCount_SAH.TabIndex = 28;
@@ -377,7 +378,7 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             this.buttonAddOrder_SAH.ForeColor = System.Drawing.Color.Gainsboro;
             this.buttonAddOrder_SAH.Location = new System.Drawing.Point(0, 481);
             this.buttonAddOrder_SAH.Name = "buttonAddOrder_SAH";
-            this.buttonAddOrder_SAH.Size = new System.Drawing.Size(225, 50);
+            this.buttonAddOrder_SAH.Size = new System.Drawing.Size(204, 50);
             this.buttonAddOrder_SAH.TabIndex = 27;
             this.buttonAddOrder_SAH.Text = "Добавить заказ";
             this.buttonAddOrder_SAH.UseVisualStyleBackColor = true;
@@ -398,11 +399,11 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             // 
             this.labelProduct_SAH.AutoSize = true;
             this.labelProduct_SAH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelProduct_SAH.Location = new System.Drawing.Point(22, 234);
+            this.labelProduct_SAH.Location = new System.Drawing.Point(210, 166);
             this.labelProduct_SAH.Name = "labelProduct_SAH";
-            this.labelProduct_SAH.Size = new System.Drawing.Size(58, 13);
+            this.labelProduct_SAH.Size = new System.Drawing.Size(38, 13);
             this.labelProduct_SAH.TabIndex = 20;
-            this.labelProduct_SAH.Text = "Продукт 1";
+            this.labelProduct_SAH.Text = "Товар";
             // 
             // labelPhoneNum_SAH
             // 
@@ -446,7 +447,7 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             // 
             // textBoxProduct_SAH
             // 
-            this.textBoxProduct_SAH.Location = new System.Drawing.Point(22, 250);
+            this.textBoxProduct_SAH.Location = new System.Drawing.Point(210, 190);
             this.textBoxProduct_SAH.Name = "textBoxProduct_SAH";
             this.textBoxProduct_SAH.Size = new System.Drawing.Size(111, 20);
             this.textBoxProduct_SAH.TabIndex = 14;
@@ -458,23 +459,23 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             this.textBoxAdress_SAH.Size = new System.Drawing.Size(170, 20);
             this.textBoxAdress_SAH.TabIndex = 15;
             // 
-            // textBoxSecondName_SAH
+            // textBoxFullName_SAH
             // 
-            this.textBoxSecondName_SAH.Location = new System.Drawing.Point(22, 83);
-            this.textBoxSecondName_SAH.Name = "textBoxSecondName_SAH";
-            this.textBoxSecondName_SAH.Size = new System.Drawing.Size(170, 20);
-            this.textBoxSecondName_SAH.TabIndex = 19;
+            this.textBoxFullName_SAH.Location = new System.Drawing.Point(22, 83);
+            this.textBoxFullName_SAH.Name = "textBoxFullName_SAH";
+            this.textBoxFullName_SAH.Size = new System.Drawing.Size(170, 20);
+            this.textBoxFullName_SAH.TabIndex = 19;
             // 
             // labelInfo_SAH
             // 
             this.labelInfo_SAH.AutoSize = true;
             this.labelInfo_SAH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelInfo_SAH.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelInfo_SAH.Location = new System.Drawing.Point(231, 23);
+            this.labelInfo_SAH.Location = new System.Drawing.Point(210, 22);
             this.labelInfo_SAH.Name = "labelInfo_SAH";
-            this.labelInfo_SAH.Size = new System.Drawing.Size(139, 17);
+            this.labelInfo_SAH.Size = new System.Drawing.Size(178, 17);
             this.labelInfo_SAH.TabIndex = 26;
-            this.labelInfo_SAH.Text = "Не балуйся с ценой";
+            this.labelInfo_SAH.Text = "Введите данные о заказе";
             // 
             // openFileDialog_SAH
             // 
@@ -508,7 +509,7 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
         private System.Windows.Forms.Label labelNumber_SAH;
         private System.Windows.Forms.Label labelName_SAH;
         private System.Windows.Forms.TextBox textBoxAdress_SAH;
-        private System.Windows.Forms.TextBox textBoxSecondName_SAH;
+        private System.Windows.Forms.TextBox textBoxFullName_SAH;
         private System.Windows.Forms.Button buttonAddOrder_SAH;
         private System.Windows.Forms.Label labelProduct_SAH;
         private System.Windows.Forms.TextBox textBoxProduct_SAH;

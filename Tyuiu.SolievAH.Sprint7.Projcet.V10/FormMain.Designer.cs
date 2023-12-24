@@ -31,19 +31,19 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelMenu_SAH = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.buttonOrder_SAH = new System.Windows.Forms.Button();
             this.panelLogo_SAH = new System.Windows.Forms.Panel();
             this.panelDesktop_SAH = new System.Windows.Forms.Panel();
+            this.buttonHelp_SAH = new System.Windows.Forms.Button();
+            this.buttonAbout_SAH = new System.Windows.Forms.Button();
             this.panelMenu_SAH.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu_SAH
             // 
             this.panelMenu_SAH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(57)))));
-            this.panelMenu_SAH.Controls.Add(this.button2);
-            this.panelMenu_SAH.Controls.Add(this.button1);
+            this.panelMenu_SAH.Controls.Add(this.buttonAbout_SAH);
+            this.panelMenu_SAH.Controls.Add(this.buttonHelp_SAH);
             this.panelMenu_SAH.Controls.Add(this.buttonOrder_SAH);
             this.panelMenu_SAH.Controls.Add(this.panelLogo_SAH);
             this.panelMenu_SAH.Dock = System.Windows.Forms.DockStyle.Left;
@@ -51,46 +51,6 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10
             this.panelMenu_SAH.Name = "panelMenu_SAH";
             this.panelMenu_SAH.Size = new System.Drawing.Size(220, 570);
             this.panelMenu_SAH.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Uighur", 8.25F);
-            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 220);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(220, 60);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "   О нас (вас) показ";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Uighur", 8.25F);
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 160);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(220, 60);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "    Помощь";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonOrder_SAH
             // 
@@ -129,6 +89,46 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10
             this.panelDesktop_SAH.Size = new System.Drawing.Size(927, 570);
             this.panelDesktop_SAH.TabIndex = 1;
             // 
+            // buttonHelp_SAH
+            // 
+            this.buttonHelp_SAH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHelp_SAH.FlatAppearance.BorderSize = 0;
+            this.buttonHelp_SAH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHelp_SAH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHelp_SAH.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonHelp_SAH.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp_SAH.Image")));
+            this.buttonHelp_SAH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHelp_SAH.Location = new System.Drawing.Point(0, 160);
+            this.buttonHelp_SAH.Name = "buttonHelp_SAH";
+            this.buttonHelp_SAH.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.buttonHelp_SAH.Size = new System.Drawing.Size(220, 60);
+            this.buttonHelp_SAH.TabIndex = 2;
+            this.buttonHelp_SAH.Text = "    Помощь";
+            this.buttonHelp_SAH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHelp_SAH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonHelp_SAH.UseVisualStyleBackColor = true;
+            this.buttonHelp_SAH.Click += new System.EventHandler(this.buttonHelp_SAH_Click);
+            // 
+            // buttonAbout_SAH
+            // 
+            this.buttonAbout_SAH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAbout_SAH.FlatAppearance.BorderSize = 0;
+            this.buttonAbout_SAH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAbout_SAH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAbout_SAH.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonAbout_SAH.Image = ((System.Drawing.Image)(resources.GetObject("buttonAbout_SAH.Image")));
+            this.buttonAbout_SAH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAbout_SAH.Location = new System.Drawing.Point(0, 220);
+            this.buttonAbout_SAH.Name = "buttonAbout_SAH";
+            this.buttonAbout_SAH.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.buttonAbout_SAH.Size = new System.Drawing.Size(220, 60);
+            this.buttonAbout_SAH.TabIndex = 3;
+            this.buttonAbout_SAH.Text = "    О кто?";
+            this.buttonAbout_SAH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAbout_SAH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAbout_SAH.UseVisualStyleBackColor = true;
+            this.buttonAbout_SAH.Click += new System.EventHandler(this.buttonAbout_SAH_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,11 +150,11 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10
         #endregion
 
         private System.Windows.Forms.Panel panelMenu_SAH;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonOrder_SAH;
         private System.Windows.Forms.Panel panelLogo_SAH;
         private System.Windows.Forms.Panel panelDesktop_SAH;
+        private System.Windows.Forms.Button buttonAbout_SAH;
+        private System.Windows.Forms.Button buttonHelp_SAH;
     }
 }
 

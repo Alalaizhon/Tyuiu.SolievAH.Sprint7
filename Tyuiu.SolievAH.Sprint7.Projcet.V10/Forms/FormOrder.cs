@@ -13,13 +13,15 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
 {
     public partial class FormOrder : Form
     {
-        public BindingList<Product> productList;
+        public BindingList<Order> orderList;
+        public BindingList<Customer> customerList;
         private BindingSource bindingSource;
+        private SortOrder currentSortOrder = SortOrder.Ascending;
         public FormOrder()
         {
             InitializeComponent();
-            productList = new BindingList<Product>();
-            bindingSource = new BindingSource(productList, null);
+            orderList = new BindingList<Order>();
+            bindingSource = new BindingSource(orderList, null);
 
             dataGridViewTable_SAH.DataSource = bindingSource;
         }
@@ -69,10 +71,10 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
 
 
                 // Создаем объект продукта
-                Product newProduct = new Product(NumOrder, products2, accountNumb, products, count, count2, price, dayOfExecution);
+                Order newOrder = new Order(NumOrder, products2, accountNumb, products, count, count2, price, dayOfExecution);
 
                 // Добавляем продукт в список
-                productList.Add(newProduct);
+                orderList.Add(newOrder);
 
                 // Очищаем текстовые поля после добавления
                 textBoxNumOrder_SAH.Clear();
@@ -110,13 +112,13 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
                     string[] headers = lines[0].Split(',');
 
                     // Очищаем старые данные в BindingList
-                    productList.Clear();
+                    orderList.Clear();
 
                     // Заполняем BindingList данными из файла
                     for (int i = 1; i < lines.Length; i++)
                     {
                         string[] values = lines[i].Split(',');
-                        productList.Add(new Product
+                        orderList.Add(new Order
                         {
                             NumOrder = Convert.ToInt32(values[0]),
                             AccountNumb = Convert.ToInt32(values[1]),
@@ -190,19 +192,55 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
 
         private void buttonRemoveOrdr_SAH_Click(object sender, EventArgs e)
         {
+            if (dataGridViewTable_SAH.SelectedRows.Count > 0)
+            {
+                // Получить выбранную строку
+                DataGridViewRow selectedRow = dataGridViewTable_SAH.SelectedRows[0];
 
+                // Получить объект продукта из выбранной строки
+                Order selectedOrder = (Order)selectedRow.DataBoundItem;
+
+                // Удалить продукт из списка
+                orderList.Remove(selectedOrder);
+            }
+            else
+            {
+                MessageBox.Show("Выберите строку для удаления", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
 
         }
 
+        private void SortDataGridViewByColumn(string columnName)
+        {
+            if (currentSortOrder == SortOrder.Ascending)
+            {
+                bindingSource.DataSource = new BindingList<Order>(orderList.OrderBy(x => typeof(Order).GetProperty(columnName).GetValue(x)).ToList());
+                currentSortOrder = SortOrder.Descending;
+            }
+            else
+            {
+                bindingSource.DataSource = new BindingList<Order>(orderList.OrderByDescending(x => typeof(Order).GetProperty(columnName).GetValue(x)).ToList());
+                currentSortOrder = SortOrder.Ascending;
+            }
+        }
 
         private void buttonSort_SAH_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string sortName = textBoxSort_SAH.Text;
+                SortDataGridViewByColumn(sortName);
+            }
 
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при вводе данных: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
         }
-        public class Product
+        public class Order
         {
             public int NumOrder { get; set; }
             public int AccountNumb { get; set; }
@@ -214,12 +252,12 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             public int DayOfExecution { get; set; }
 
             // Конструктор по умолчанию 
-            public Product()
+            public Order()
             {
 
             }
 
-            public Product(int numOrder,  string nameProduct2, int accountNumb, string nameProdct, int count, int count2, int price, int dayOfExecution)
+            public Order(int numOrder,  string nameProduct2, int accountNumb, string nameProdct, int count, int count2, int price, int dayOfExecution)
             {
                 NumOrder = numOrder;
                 AccountNumb = accountNumb;
@@ -232,6 +270,55 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10.Forms
             }
         }
 
-   
+        private void SearchInDataGridView(string searchText)
+        {
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                // Если поле поиска пусто, отобразить все данные
+                dataGridViewTable_SAH.DataSource = bindingSource;
+            }
+            else
+            {
+                // Иначе выполните поиск и отобразить результаты
+                var searchResults = orderList.Where(product =>
+                    product.NumOrder.ToString().Contains(searchText) ||
+                    product.AccountNumb.ToString().Contains(searchText) ||
+                    product.Products.Contains(searchText) ||
+                    product.Products2.Contains(searchText) ||
+                    product.Count2.ToString().Contains(searchText) ||
+                    product.Price.ToString().Contains(searchText) ||
+                    product.Count.ToString().Contains(searchText) ||
+                    product.DayOfExecution.ToString().Contains(searchText) 
+                ).ToList();
+
+                dataGridViewTable_SAH.DataSource = new BindingList<Order>(searchResults);
+            }
+        }
+
+        public class Customer
+        {
+            public string FullName { get; set; }
+            public string Adress { get; set; }
+            public int AccountNumb { get; set; }
+            public int PhoneNum { get; set; }
+            
+            public Customer()
+            {
+
+            }
+
+            public Customer( string fullName, string adress, int accountNumb, int phoneNum)
+            {
+                FullName = fullName;
+                Adress = adress;
+                AccountNumb = accountNumb;
+                PhoneNum = phoneNum;
+            }
+        }
+
+        private void textBoxSearch_SAH_TextChanged(object sender, EventArgs e)
+        {
+            SearchInDataGridView(textBoxSearch_SAH.Text);
+        }
     }
 }

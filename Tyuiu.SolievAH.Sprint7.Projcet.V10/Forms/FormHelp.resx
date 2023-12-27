@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBoxForText_SAH.Text" xml:space="preserve">
+    <value>Когда вы видете данный элемент приложения
+Вам нужно заполнить его в соответствие его названия
+То есть, если это номер нужны значения цифр.
+Если это текст, нужно писать текст
+В противном случае вводимые данные будут некорректны.
+</value>
+  </data>
 </root>

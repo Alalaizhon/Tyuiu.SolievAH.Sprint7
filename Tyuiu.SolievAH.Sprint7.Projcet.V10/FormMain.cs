@@ -92,6 +92,11 @@ namespace Tyuiu.SolievAH.Sprint7.Projcet.V10
             OpenChildForm(new Forms.FormHelp(), sender);
         }
 
+        private void buttonCustomer_SAH_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormCustomer(), sender);
+        }
+
         private void buttonAbout_SAH_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormAbout(), sender);
